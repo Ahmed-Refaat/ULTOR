@@ -1,0 +1,23 @@
+<!doctype html>
+<!--
+  Ultor — Open Source Geospatial Intelligence
+  Entry HTML. The Cesium container fills the viewport; main.js mounts the
+  globe and HUD. All styling for the globe is minimal here; HUD styles
+  are injected by hud.js.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ultor</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 100%; height: 100%; overflow: hidden; background: #000; }
+      #cesium-container { width: 100%; height: 100%; }
+    </style>
+  </head>
+  <body>
+    <div id="cesium-container"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+{
+  "name": "ultor",
+  "version": "1.0.0",
+  "description": "Real-time geospatial intelligence on a photorealistic 3D globe",
+  "author": "Sequoia Boubion-McKay",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sequoiabm/ULTOR"
+  },
+  "private": true,
+  "type": "module",
+  "main": "dist-electron/main.js",
+  "scripts": {
+    "dev": "NODE_ENV=development vite",
+    "build": "vite build && electron-builder",
+    "build:web": "vite build",
+    "preview": "vite preview"
+  },
+  "build": {
+    "appId": "com.sequoiabm.ultor",
+    "productName": "Ultor",
+    "icon": "build/icon.png",
+    "mac": {
+      "target": "dmg",
+      "category": "public.app-category.utilities"
+    },
+    "files": [
+      "dist/**/*",
+      "dist-electron/**/*"
+    ]
+  },
+  "devDependencies": {
+    "electron": "^41.0.2",
+    "electron-builder": "^26.8.1",
+    "esbuild": "^0.27.4",
+    "vite": "^8.0.0",
+    "vite-plugin-electron": "^0.29.0",
+    "vite-plugin-electron-renderer": "^0.14.6"
+  },
+  "dependencies": {
+    "cesium": "^1.139.1",
+    "satellite.js": "^6.0.2",
+    "vite-plugin-cesium": "^1.2.23",
+    "ws": "^8.19.0"
+  }
+}
