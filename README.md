@@ -58,7 +58,7 @@ It's designed as a **platform**, not a product. The layer system is intentionall
 | Military Flights | airplanes.live / ADSB Exchange | Optional (VITE_ADSB_KEY) |
 | Maritime AIS | aisstream.io via Electron proxy | Yes (VITE_AISSTREAM_KEY) |
 | Earthquakes | USGS GeoJSON feed | No |
-| Street Traffic | Overpass API (OSM roads) | No |
+| Street Traffic | Particle simulation (OSM road geometry) — not real traffic | No |
 | CCTV | Caltrans D4 CWWP2 | No |
 
 ---
@@ -132,7 +132,7 @@ ULTOR/
 │       ├── military.js    # Military aircraft (ADSB/airplanes.live)
 │       ├── maritime.js    # AIS ship tracking
 │       ├── seismic.js     # USGS earthquakes
-│       ├── traffic.js     # OSM road particle system
+│       ├── traffic.js     # Particle simulation along OSM roads (not real traffic)
 │       └── cameras.js     # Caltrans CCTV feeds
 ├── index.html
 ├── vite.config.js
